@@ -1,0 +1,22 @@
+0.題目：SP LAB5 setjmp/longjmp
+1.學號:406410114
+2.姓名:郭晏誠
+3.環境(哪一台工作站): linux.cs.edu.tw
+4.E-mail:mv123453715@gmail.com
+5.操作方法
+  (1)make 產生lab5_stu
+  (2)./lab5_stu即可看到輸出結果
+  
+6.設計簡介
+  (1)Rule
+    (i)只有一個‘@’ 
+    (ii)Special characters不被允許，例如： ‘#’, ’*’,  ”..” 
+    (iii) ‘@’ 後面至少一個‘.’ 
+  (2)採用setjmp/longjmp function檢測
+    (i)  setjmp(jmpbuffer) == 0 →  valid email address!
+    (ii) setjmp(jmpbuffer) == 1 →  Email format error: at least one @
+    (iii)setjmp(jmpbuffer) == 2 →  Email format error: more than one @
+    (iv) setjmp(jmpbuffer) == 3 →  Email format error: can't exist #
+    (v)  setjmp(jmpbuffer) == 4 →  Email format error: can't exist *
+    (vi) setjmp(jmpbuffer) == 5 →  Email format error: can't exist ..
+    (vii)setjmp(jmpbuffer) == 6 →  Email format error: at least one . behind the @

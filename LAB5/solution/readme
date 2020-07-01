@@ -1,0 +1,15 @@
+0.題目：SP LAB5 Stdio Compare
+1.學號:406410114
+2.姓名:郭晏誠
+3.環境(哪一台工作站): linux.cs.edu.tw
+4.E-mail:mv123453715@gmail.com
+5.操作方法
+  (1)dd if=/dev/zero of=LAB5_test_100MB bs=1024 count=102400
+  (2)make 產生fig5_4 , fig5_5 , fig5_5_Full_buffering, fig5_5_Line_buffering,fig5_5_No_buffering
+  (3)time ./fig5_4 < LAB5_test_100MB
+  (4)time ./fig5_5 < LAB5_test_100MB
+  (5)time ./fig5_5_Full_buffering < LAB5_test_100MB
+  (6)time ./fig5_5_Line_buffering < LAB5_test_100MB
+  (7)time ./fig5_5_No_buffering < LAB5_test_100MB
+  (8)make clean可以清除輸出檔案和中間檔案
+  (9)詳情結果與統計請見Answers.docx和LAB5_Tables.docx
