@@ -1,0 +1,11 @@
+0.題目：SP LAB4 File Attributes 
+1.學號:406410114
+2.姓名:郭晏誠
+3.環境(哪一台工作站): linux.cs.edu.tw
+4.E-mail:mv123453715@gmail.com
+5.簡介
+  (1)make 即可執行
+  (2)權限修改：在dopath中新增chmod(fullpath, 0777)，詳細解答請參考Answers.docx
+  (3)計算Total size：在dopath中新增total_size += statbuf.st_size，詳細解答請參考Answers.docx
+  (4)count of valid and invalid link：在myfunc中新增用readlink和access進行判斷，詳細解答請參考Answers.docx
+	(5)make clean清除所有中間檔與output檔案

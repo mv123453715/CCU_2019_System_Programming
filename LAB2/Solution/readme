@@ -1,0 +1,37 @@
+0.題目：SP LAB2  Buffer Size
+1.學號:406410114
+2.姓名:郭晏誠
+3.環境(哪一台工作站): linux.cs.edu.tw
+4.E-mail:mv123453715@gmail.com
+5.簡介
+    (1)part1
+      使用dd 創建1mb,50mb,500mb的檔案給Buffer Size100,4096,8192,16384測試用
+      參考指令：dd if=/dev/zero of=FILENAME bs=XXX count=XXX
+    (2)part2
+      使用int null_fd = open( "/dev/null", O_WRONLY ) 和write(null_fd, buf, n)將輸出倒到/dev/null中
+      詳見Answer.doc I
+    (3)part3
+      開始測試不同Buffer Size的效果，結果為
+      system time：大BUFFSIZE在上面快上許多
+      real time：其實四者的速度雖然有些落差，但是都差不多
+      詳見Answer.doc II
+    (4)part4
+      連續執行相同的I/O指令
+      速度大幅提升(4.89s->0.12s)
+      詳見Answer.doc III
+    (5)part5
+      使用fsync連續執行相同的I/O指令
+      速度大幅提升(4.96s->0.11s)
+      詳見Answer.doc IV
+      
+6.使用方式
+	(1)需先使用簡介(1)中的方法創建檔案
+  (2)make會產生五個檔案
+    (a)buffersize100
+    (b)buffersize4096
+    (c)buffersize8192
+    (d)buffersize16384
+    (e)buffersize4096_fsync
+	(3)使用方法
+    (a)time $./buffersize[Buffer Size] < [FILENAME]
+	(4)make clean清除所有中間檔與output檔案

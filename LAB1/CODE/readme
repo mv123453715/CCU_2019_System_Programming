@@ -1,0 +1,15 @@
+1.學號:406410114
+2.姓名:郭晏誠
+3.環境(哪一台工作站): linux.cs.edu.tw
+4.E-mail:mv123453715@gmail.com
+5.設計簡介
+    (1)	Parent 
+      判斷為built-in指令(例：logout、exit、cd、history)就直接用parent做，不呼叫child
+    (2)	Child
+      若為其他指令由child做
+    (3)	額外功能：! + “XX”  可以執行重複指令
+      偵測!開頭，並且執行XX號碼的指令，若超過原本儲存的history instruction num則會報出error
+6.使用方式
+	(1)make
+	(2)./shell
+	(3)目前已測過：ls , ls-al mkdir ,vim, echo, cd,pwd,exit, logout , history , !+"NUM"
